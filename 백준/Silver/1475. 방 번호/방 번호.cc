@@ -2,18 +2,26 @@
 
 using namespace std;
 
-int main() {
+int main(){
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
-    int num[10] = {};
-    string n;
+    int count[10] = {};
+
+    int n, res = 0;
     cin >> n;
 
-    for (int i = 0; i < n.length(); i++)
-        num[n[i] - '0']++;
+    string s = to_string(n);
 
-    num[6] = num[9] = (num[6] + num[9] + 1) / 2;
+    for (auto i : s)
+        count[i - '0']++;
 
-    cout << *max_element(num, num+10);
+    for (int i = 0; i < 10; i++){
+        if (i == 6 || i == 9)
+            continue;
+        res = max(res, count[i]);
+    }
+    
+    res = max(res, (count[6] + count[9] + 1) / 2);
+    cout << res;
 }
