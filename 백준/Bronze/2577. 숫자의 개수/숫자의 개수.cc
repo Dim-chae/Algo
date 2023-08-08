@@ -2,25 +2,20 @@
 
 using namespace std;
 
-int main() {
+int main(){
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
-    int num[10] = {};
-    string s;
+    int count[10] = {};
+
     int a, b, c;
-
     cin >> a >> b >> c;
-    s = to_string(a*b*c);
 
-    for (int i = 0; i < s.length(); i++){
-        for (int j = 0; j < 10; j++) {
-            if (s[i] - '0' == j)
-                num[j]++;
-        }
-    }
+    string s = to_string(a * b * c);
 
-    for (int i = 0; i < 10; i++)
-        cout << num[i] << '\n';
+    for (auto i : s)
+        count[i - '0']++;
 
+    for (auto i : count)
+        cout << i << '\n';
 }
