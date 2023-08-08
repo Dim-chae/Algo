@@ -4,15 +4,16 @@ using namespace std;
 
 int main(){
     ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(nullptr);
 
-    int num[26] = {};
+    int count[26] = {};
     string s;
+
     cin >> s;
 
-    for (int i = 0; i < s.length(); i++)
-        num[s[i] - 'a']++;
+    for (auto c : s)
+        count[c - 'a']++;
 
     for (int i = 0; i < 26; i++)
-        cout << num[i] << ' ';
+        cout << count[i] << ' ';
 }
