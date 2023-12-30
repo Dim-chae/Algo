@@ -2,18 +2,18 @@
 
 using namespace std;
 
-int main(){
-    ios::sync_with_stdio(false);
-    cin.tie(nullptr);
+int main() {
+    cin.tie(0);
+    ios::sync_with_stdio(0);
+    
+    int alp[26] = {0, };
 
-    int count[26] = {};
     string s;
-
     cin >> s;
 
-    for (auto c : s)
-        count[c - 'a']++;
+    for (int i = 0; i < s.length(); i++)
+        alp[s[i] - 'a']++;
 
-    for (int i = 0; i < 26; i++)
-        cout << count[i] << ' ';
+    for (auto i : alp)
+        cout << i << ' ';
 }
