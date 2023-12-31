@@ -3,25 +3,16 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(0);
     cin.tie(0);
-
-    int num[3];
-    int tmp;
+    ios::sync_with_stdio(0);
     
+    int arr[3];
+
     for (int i = 0; i < 3; i++)
-        cin >> num[i];
-
-    for (int i = 0; i < 3; i++){
-        for (int j = 0; j < 2 - i; j++){
-            if (num[j] > num[j+1]){
-                tmp = num[j];
-                num[j] = num[j+1];
-                num[j+1] = tmp;
-            }
-        }
-    }
+        cin >> arr[i];
     
-    for (auto i : num)
-        cout << i << ' ';
+    sort(arr, arr + 3);
+
+    for (int i = 0; i < 3; i++)
+        cout << arr[i] << ' ';
 }
