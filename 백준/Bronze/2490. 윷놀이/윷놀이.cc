@@ -3,26 +3,25 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(0);
     cin.tie(0);
-
+    ios::sync_with_stdio(0);
+    
     int a, b, c, d;
 
     for (int i = 0; i < 3; i++) {
         cin >> a >> b >> c >> d;
-        int t = a + b + c + d;
+        
+        int res = a + b + c + d;
 
-        switch (t){
-            case 0:
-                cout << 'D' << '\n'; break;
-            case 1:
-                cout << 'C' << '\n'; break;
-            case 2:
-                cout << 'B' << '\n'; break;
-            case 3:
-                cout << 'A' << '\n'; break;
-            case 4:
-                cout << 'E' << '\n'; break;
-        }
+        if (res == 3)
+            cout << "A\n";
+        else if (res == 2)
+            cout << "B\n";
+        else if (res == 1)
+            cout << "C\n";
+        else if (res == 0)
+            cout << "D\n";
+        else
+            cout << "E\n";
     }
 }
