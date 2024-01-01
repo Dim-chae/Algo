@@ -3,18 +3,18 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
+    ios::sync_with_stdio(0);
+    
+    int N;
+    cin >> N;
 
-    int n;
-    cin >> n;
-
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            if (j < n-i-1)
-                cout << ' ';
-            else
-                cout << '*';
+    for (int i = 0; i < N; i++) {
+        for (int j = N - 1; j > i; j--) {
+            cout << ' ';
+        }
+        for (int j = 0; j <= i; j++) {
+            cout << '*';
         }
         cout << '\n';
     }
