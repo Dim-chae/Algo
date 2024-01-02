@@ -3,22 +3,19 @@
 using namespace std;
 
 int main() {
-    ios::sync_with_stdio(false);
-    cin.tie(NULL);
+    cin.tie(0);
+    ios::sync_with_stdio(0);
 
-    int num, max;
-    int arr[9];
+    int arr[9], max, idx;
 
     for (int i = 0; i < 9; i++)
         cin >> arr[i];
-
-    max = arr[0];
-
-    for (int j = 0; j < 9; j++)
-        if (arr[j] >= max) {
-            max = arr[j];
-            num = j+1;
+    
+    for (int i = 0; i < 9; i++) {
+        if (i == 0 || arr[i] > max) {
+            max = arr[i];
+            idx = i;
         }
-
-    cout << max << '\n' << num;
+    }
+    cout << max << '\n' << idx + 1;
 }
