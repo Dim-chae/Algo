@@ -14,7 +14,7 @@ int main() {
         cin >> N;
 
         if (N == 0) {
-            cout << 0 << '\n';
+            cout << 1 << '\n';
             continue;
         }
 
