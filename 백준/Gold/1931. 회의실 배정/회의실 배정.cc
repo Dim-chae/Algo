@@ -11,7 +11,7 @@ int main() {
     int N;
     cin >> N;
 
-    int s, e, cnt = 0;
+    int s, e;
 
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
     queue<pair<int, int>> q;
