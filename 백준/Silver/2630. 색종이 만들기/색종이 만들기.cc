@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int paper[128][128];
+bool paper[128][128];
 int white = 0, blue = 0;
 
 void check(int x, int y, int n) {
